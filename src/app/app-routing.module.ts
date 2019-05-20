@@ -29,15 +29,17 @@ const routes: Routes = [
 },
 {
   path: 'aportal',
-  component: AportalComponent
-},
-{
-  path: 'aregister',
-  component: AregisterComponent
-},
-{
-  path: 'aproviders',
-  component: AprovidersComponent
+  component: AportalComponent,
+  children: [
+    {
+      path: 'aregister',
+      component: AregisterComponent
+    },
+    {
+      path: 'aproviders',
+      component: AprovidersComponent
+    }
+  ]
 },
 {
   path: 'eportal',

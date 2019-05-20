@@ -1,5 +1,5 @@
 <br>
-<h3>DBI // ADMIN PORTAL</h3>
+<h3><img src="https://fontmeme.com/permalink/190519/28dfeef4ddc8e033af90999b5f746011.png" alt="DBI logo"></h3>
 <br>
 
 <h2>Administrator Portal</h2>
@@ -8,10 +8,10 @@
 <div class="row justify-content-center">
   
   <div class="col-9">       
-    <button type="button" class="btn btn-primary">Register Employee</button>
-    <button type="button" class="btn btn-primary">Provider Selection</button>
-    <br><a href="http://localhost:4200/aregister">Register Employee TEMP LINK</a>
-    <br><a href="http://localhost:4200/aproviders">Provider Selection TEMP LINK</a>
+    <button type="button" class="btn btn-primary"><a [routerLink]="['aregister']">REGISTER EMPLOYEE</a></button>
+    <button type="button" class="btn btn-primary"><a [routerLink]="['aproviders']">PROVIDER SELECTION</a></button>
   </div>
 
 </div>
+
+<router-outlet></router-outlet>
