@@ -7,6 +7,10 @@ import { AportalComponent } from 'src/app/components/aportal/aportal.component';
 import { AregisterComponent } from 'src/app/components/aregister/aregister.component';
 import { AprovidersComponent } from 'src/app/components/aproviders/aproviders.component';
 import { EportalComponent } from 'src/app/components/eportal/eportal.component';
+import { EoptionsComponent } from 'src/app/components/eoptions/eoptions.component';
+import { EselectionComponent } from 'src/app/components/eselection/eselection.component';
+import { EsummaryComponent } from 'src/app/components/esummary/esummary.component';
+
 
 const routes: Routes = [
 {
@@ -37,7 +41,21 @@ const routes: Routes = [
 },
 {
   path: 'eportal',
-  component: EportalComponent
+  component: EportalComponent,
+  children: [
+    {
+      path: 'eoptions',
+      component: EoptionsComponent
+    },
+    {
+      path: 'eselection',
+      component: EselectionComponent
+    },
+    {
+      path: 'esummary',
+      component: EsummaryComponent
+    }
+  ]
 }
 ];
 
