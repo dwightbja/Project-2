@@ -13,6 +13,8 @@ import { EselectionComponent } from './components/eselection/eselection.componen
 import { EsummaryComponent } from './components/esummary/esummary.component';
 import { AportalComponent } from './components/aportal/aportal.component';
 import { EportalComponent } from './components/eportal/eportal.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { EportalComponent } from './components/eportal/eportal.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
