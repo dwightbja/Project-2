@@ -6,19 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aproviders.component.css']
 })
 export class AprovidersComponent implements OnInit {
-public show = false;
-public buttonName: any = 'Expand';
+  public show = false;
+  public buttonName: any = 'Expand';
   constructor() { }
 
   ngOnInit() {
   }
-
   toggle() {
     this.show = !this.show;
+
+    // CHANGE THE TEXT OF THE BUTTON.
     if (this.show) {
-    this.buttonName = 'Collapse';
+      this.buttonName = 'Collapse';
     } else {
-    this.buttonName = 'Expand';
-    }
+      this.buttonName = 'Expand';
+  }
   }
 }
