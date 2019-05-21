@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AregisterService } from 'src/app/services/aresgister/aregister.service';
 
 @Component({
   selector: 'app-aregister',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aregister.component.css']
 })
 export class AregisterComponent implements OnInit {
-
-  constructor() { }
+ firstName = '';
+  lastName = '';
+  email = '';
+  registerAttemptSucceeded = undefined;
+  constructor(private aregisterService: AregisterService) { }
 
   ngOnInit() {
+  }
+  submit() {
+    // call the signupService signup method
+    this.aregisterService.aregister(this.email, this.firstName, this.lastName).subscribe( result => {
+      this.registerAttemptSucceeded = true;
+    }, error => {
+      this.registerAttemptSucceeded = false;
+    });
   }
 
 }
