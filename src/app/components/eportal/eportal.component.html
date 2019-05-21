@@ -1,5 +1,5 @@
 <br>
-<h3>DBI©</h3>
+<h3><img src="https://fontmeme.com/permalink/190519/28dfeef4ddc8e033af90999b5f746011.png" alt="DBI logo"></h3>
 <br>
 
 <h2>Employee Portal</h2>
@@ -8,8 +8,10 @@
 <div class="row justify-content-center">
   
   <div class="col-9">     
-    <button type="button" class="btn btn-primary">Benefit Information</button>
-    <button type="button" class="btn btn-primary">Benefit Selection</button>
-    <button type="button" class="btn btn-primary">Selection Summary</button>
+    <button type="button" class="btn btn-primary"><a [routerLink]="['eoptions']">BENEFIT OPTIONS</a></button>
+    <button type="button" class="btn btn-primary"><a [routerLink]="['eselection']">BENEFIT SELECTION</a></button>
+    <button type="button" class="btn btn-primary"><a [routerLink]="['esummary']">BENEFIT SUMMARY</a></button>
   </div>
 </div>
+
+<router-outlet></router-outlet>
