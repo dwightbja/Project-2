@@ -41,6 +41,13 @@ margin: 0 auto;
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+h4 {
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
 label {
 font-weight: bold;
 color: white;
