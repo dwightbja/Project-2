@@ -15,6 +15,7 @@
       <p *ngIf="lastStatus === 400">Username or password is incorrect.</p>
       <p *ngIf="lastStatus === 500">Unknown server error occurred.</p>
       <p *ngIf="lastStatus === 0">Server unreachable.</p>
+      <br>
       <div class="form-group">
         <label for="exampleInputEmail1">User ID</label>
         <input type="email" class="form-control" id="companyEmail" [(ngModel)]="companyEmail"
@@ -29,9 +30,8 @@
       </div>
 
       <button type="submit" (click)="submit()" class="btn btn-primary">SUBMIT</button>
-      <br>
-      <br><a href="http://localhost:4200/aportal">Administrator Portal TEMP LINK</a>
-      <br><a [routerLink]="['']">Home</a>
+      <a [routerLink]="['']">Home</a>
+      <br><br><br><a href="http://localhost:4200/aportal">Administrator Portal TEMP LINK</a>
       </form>
   </div>
 </div>
