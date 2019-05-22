@@ -35,19 +35,22 @@ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h2 {
+font-weight: normal;
 text-align: center;
-color: white;
+color: black;
 margin: 0 auto;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 37px;
+padding-left: 30px;
 }
 
 label {
-font-weight: bold;
-color: white;
-font-size: 13px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-text-shadow: 3px 0px 50px turquoise;
-}
+    font-weight: bold;
+    color: silver;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 0px 50px turquoise;
+    }
 
 button {
 display: inline-block;
@@ -93,4 +96,14 @@ p {
     color: white;
     font-size: 13px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container {
+    padding-right: 30px;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 23px;
+    background-color: white;
+    box-shadow: 2px 2px 3px 3px white;
 }
