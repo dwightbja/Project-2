@@ -17,7 +17,7 @@ export class AloginService {
       password: password
     };
 
-    this.httpClient.post('http://localhost:8080/ProjectTwoa_V1/alogin', payload, {
+    this.httpClient.post('http://localhost:8081/Company', payload, {
         observe: 'response'
       }).subscribe(response => {
         this.loginStatusSubject.next(200);
