@@ -9,11 +9,12 @@ export class AprovidersService {
   private resolveStatusSubject = new Subject<number>();
   public $resolveStatus = this.resolveStatusSubject.asObservable();
   constructor(private httpClient: HttpClient) { }
- 
-  aProviderSelection(companyID: number, providerId: number) {
-    const payload ={
+
+  aProviderSelection(companyID: number, providerId: number, typeId: number) {
+    const payload = {
       companyID: companyID,
-      providerId: providerId
+      providerId: providerId,
+      typeId: typeId
     };
     this.httpClient.post('http://localhost:8080/ProjectTwoa_V1/alogin', payload, {
       observe: 'response'

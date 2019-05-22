@@ -45,7 +45,7 @@ export class AprovidersComponent implements OnInit {
   }
   }
   
-  aProviderSelection(providerId) {
-    this.aproviderService.aProviderSelection(this.companyID, providerId);
+  aProviderSelection(providerId, typeId) {
+    this.aproviderService.aProviderSelection(this.companyID, providerId, typeId);
   }
 }
