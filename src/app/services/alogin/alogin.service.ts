@@ -11,16 +11,16 @@ export class AloginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  alogin(companyEmail: string, password: string): void {
+  alogin(companyEmail: string, Password: string): void {
     const payload = {
-      companyEmail: companyEmail,
-      password: password
+      userEmail: companyEmail,
+      password: Password
     };
 
-    this.httpClient.post('http://localhost:8081/Company', payload, {
+    this.httpClient.post('http://localhost:8081/Company/login', payload, {
         observe: 'response'
       }).subscribe(response => {
-        this.loginStatusSubject.next(200);
+        this.loginStatusSubject.next(201);
       }, err => {
         this.loginStatusSubject.next(err.status);
       });

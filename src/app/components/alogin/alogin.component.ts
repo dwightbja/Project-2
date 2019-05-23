@@ -10,16 +10,16 @@ import { Router } from '@angular/router';
 })
 export class AloginComponent implements OnInit, OnDestroy {
   companyEmail = '';
-  password = '';
+  Password = '';
   loginResponse: Subscription;
-  lastStatus = 200;
+  lastStatus = 201;
 
   constructor(private aloginService: AloginService, private router: Router ) { }
 
   ngOnInit() {
     this.loginResponse = this.aloginService.$loginStatus.subscribe(status => {
       // do something with status here
-      if (status === 200) {
+      if (status === 201) {
         this.router.navigateByUrl('aportal');
       } else {
         // set status to lastStatus to display appripraite error mesage
@@ -36,7 +36,6 @@ ngOnDestroy(): void {
 }
 
 submit() {
-  this.aloginService.alogin(this.companyEmail, this.password);
-
+  this.aloginService.alogin(this.companyEmail, this.Password);
 }
 }
