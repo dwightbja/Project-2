@@ -1,21 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AregisterService {
-
+  private aregisterStatusSubject = new Subject<number>();
+  public $aregisterStatus = this.aregisterStatusSubject.asObservable();
   constructor(private httpClient: HttpClient) { }
 
-  aregister(employeeFirstName: string, employeeLastName: string, employeeEmail: string): Observable<any> {
+  aregister(firstname: string, lastname: string, email: string): void {
     const payload = {
-      employeeFirstName: employeeFirstName,
-      employeeLastName: employeeLastName,
-      employeeEmail: employeeEmail
+      employeeFirstName: firstname,
+      employeeLastName: lastname,
+      employeeEmail: email
 
     };
-    return this.httpClient.post('http://localhost:8080/ProjectTwoa_V1/aregister', payload);
+    this.httpClient.post('http://localhost:8080/Employee', payload, {
+    }).subscribe(response => {
+      sessionStorage.setItem('cache', response.body.toString());
+      this.aregisterStatusSubject.next(201);
+    }, err => {
+      this.aregisterStatusSubject.next(err.status);
+    });
   }
 }
